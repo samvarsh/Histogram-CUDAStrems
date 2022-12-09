@@ -74,7 +74,9 @@ void histogram(unsigned int* a_h, unsigned int* bins_h, unsigned int num_element
 	/*************************************************************************/
   //INSERT CODE HERE
 	int segSize = 100000;
-
+	if (num_elements < 2*segSize)
+		segSize = num_elements / 2;
+	
 	cudaStream_t stream0;
 	cudaStream_t stream1;
 	cudaStreamCreate(&stream0);
