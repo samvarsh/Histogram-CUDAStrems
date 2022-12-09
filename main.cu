@@ -104,6 +104,7 @@ int main(int argc, char* argv[])
     if (cuda_ret != cudaSuccess) printf("Unable to launch/execute kernel");
 
     stopTime(&timer); printf("%f s\n", elapsedTime(timer));
+    printf("This includes - Device Allocation time,  Host to Device transfer time, Kernel time and Device to Host transfer time");
    /* gettimeofday(&time); timeval e = time;
     printf("\n Time %f \n", ((float)((e.tv_sec - s.tv_sec) + (e.tv_usec - s.tv_usec) / 1.0e6)));*/
 
