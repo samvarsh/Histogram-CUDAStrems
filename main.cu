@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     cudaError_t cuda_ret;
 
     if (argc == 1) {
-        num_elements = 1000000000;
+        num_elements = 10000000;
         num_bins = 1024;
     }
     else if (argc == 2) {
