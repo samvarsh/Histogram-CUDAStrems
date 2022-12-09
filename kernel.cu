@@ -105,6 +105,11 @@ void histogram(unsigned int* a_h, unsigned int* bins_h, unsigned int num_element
 	cudaStatus = cudaMemset(bins_d, 0, num_bins * sizeof(unsigned int));
 	if (cudaStatus != cudaSuccess) printf("Unable to set device memory");
 
+	cudaStatus = cudaMemset(b_d0, 0, num_bins * sizeof(unsigned int));
+	if (cudaStatus != cudaSuccess) printf("Unable to set device memory");
+	cudaStatus = cudaMemset(b_d1, 0, num_bins * sizeof(unsigned int));
+	if (cudaStatus != cudaSuccess) printf("Unable to set device memory");
+	
 
 	for (int i = 0; i < num_elements; i += segSize * 2)
 	{
